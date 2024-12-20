@@ -1,0 +1,17 @@
+:root {
+    /* Primary Color */
+    --color-primary: #007bff; /* Primary blue */
+  
+    /* Background Colors */
+    --color-bg-light: #f8f9fa; /* Light background */
+    --color-bg-dark: #212529; /* Dark background */
+  
+    /* Border Colors */
+    --color-border-light: #e5e5e5; /* Light border */
+    --color-border-dark: #333333; /* Dark border */
+  
+    /* Text Colors */
+    --color-text-primary: #ffffff; /* Primary text color */
+    --color-text-secondary: #151515; /* Secondary text color */
+    --color-text-placeholder: #646464; /* Placeholder text color */
+}  
