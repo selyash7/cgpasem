@@ -1,4 +1,17 @@
+* {
+    box-sizing: border-box;
+
+    &::before {
+        box-sizing: border-box;
+    }
+
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
 body {
+    height: 100%;
     font-family: var(--font-family-arial);
     font-style: var(--fs-normal);
     color: var(--color-text-primary);
@@ -6,20 +19,20 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    overflow: hidden;
 }
 
 .container {
     width: 100%;
     max-width: var(--fs-1200);
     margin: 0 auto;
-    padding: 0 var(--fs-20);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-arial);
     font-style: var(--fs-normal);
-    color: var(--color-text-primary);
-    margin: 0 0 1rem 0;
+    color: var(--color-text-secondary);
+    margin: 0;
 }
 
 h1 {
@@ -88,7 +101,7 @@ input {
     &[type=number] {
         font-family: var(--font-family-arial);
         font-style: var(--fs-normal);
-        font-size: var(--fs-16);
+        font-size: var(--fs-14);
         color: var(--color-primary);
         background-color: var(--color-bg-light);
         border: var(--fs-1) solid var(--color-border-light);
@@ -96,6 +109,7 @@ input {
         padding: 0.5rem var(--fs-16);
         width: 100%;
         box-sizing: border-box;
+        -moz-appearance: textfield;
         transition: all .3s ease;
 
         &:focus {
@@ -110,13 +124,14 @@ input {
         &::placeholder {
             color: var(--color-text-placeholder);
             font-style: var(--fs-italic);
+            font-size: var(--fs-14);
         }
     }
 
     &[type=text] {
         font-family: var(--font-family-arial);
         font-style: var(--fs-normal);
-        font-size: var(--fs-16);
+        font-size: var(--fs-14);
         color: var(--color-primary);
         background-color: var(--color-bg-light);
         border: var(--fs-1) solid var(--color-border-light);
@@ -138,6 +153,32 @@ input {
         &::placeholder {
             color: var(--color-text-placeholder);
             font-style: var(--fs-italic);
+            font-size: var(--fs-14);
         }
+    }
+
+    &[type=submit] {
+        border: var(--fs-2) solid transparent;
+        border-radius: var(--fs-8);
+        background-color: var(--color-primary);
+        color: var(--color-text-primary);
+        padding: var(--fs-8) var(--fs-12);
+        transition: all .3s ease;
+
+        &:hover {
+            border: var(--fs-2) solid var(--color-primary);
+            background-color: var(--color-bg-light);
+            color: var(--color-text-secondary);
+        }
+    }
+
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
     }
 }

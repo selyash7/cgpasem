@@ -7,6 +7,35 @@
   <link rel="stylesheet" href="build/styles.min.css">
 </head>
 <body>
+  <section class="main">
+    <img src="assets/images/hero-bg.png" class="hero-bg">
+    <div class="container main-wrapper">
+      <div class="std-form">
+        <h3>Enter Your Detail</h3>
+        <form action="#">
+          <input type="text" id="user-name" placeholder="Enter Your Name">
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <div class="form-container">
+        <div class="slider-title">
+          <div>
+            <button class="arrow" id="left-arrow">&larr;</button>
+          </div>
+          <div class="subject-title">
+            <h3 class="title" id="subject-name">Chemistry</h3>
+          </div>
+          <div>
+            <button class="arrow" id="right-arrow">&rarr;</button>
+          </div>
+        </div>
+        <div id="dynamic-form-container" class="subject-form">
+          <form id="dynamic-form" action="">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
   <script src="build/bundle.js"></script>
 </body>
 </html>
