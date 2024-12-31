@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "postcss assets/css/index.css -o build/styles.min.css --watch",
     "build-css": "postcss assets/css/index.css -o build/styles.min.css",
-    "build-js": "gulp scripts"
+    "gulp": "npx gulp"
   },
   "keywords": [],
   "author": "",
@@ -22,9 +22,13 @@
     "postcss-nested": "^7.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
     "gulp": "^5.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
     "gulp-uglify": "^3.0.2"
   }
 }
